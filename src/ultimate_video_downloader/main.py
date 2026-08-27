@@ -3,7 +3,7 @@ import certifi
 
 from pathlib import Path
 
-from src.downloader import download_url
+from ultimate_video_downloader.downloader import download_url
 
 DEFAULT_OUTPUT_DIR = "~/Downloads"
 

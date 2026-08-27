@@ -1,19 +1,21 @@
-[build-system]
-requires = ["setuptools>=68"]
-build-backend = "setuptools.build_meta"
-
 [project]
-name = "ultimate_downloader"
-version = "1.0.0"
-description = "유튜브 / 인스타그램 릴스 통합 다운로더"
-requires-python = ">=3.10"
+name = "ultimate-video-downloader"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "SoJune1023", email = "ssojune@naver.com" }
+]
+requires-python = ">=3.14"
 dependencies = [
-    "yt-dlp>=2024.1.0",
-    "certifi>=2024.1.0",
+    "certifi>=2026.7.22",
+    "pyinstaller>=6.22.2",
+    "yt-dlp>=2026.8.19",
 ]
 
 [project.scripts]
-ultimate_downloader = "src.__main__:main"
+ultimate-video-downloader = "ultimate_video_downloader.main:main"
 
-[tool.setuptools]
-packages = ["src"]
+[build-system]
+requires = ["uv_build>=0.12.6,<0.13.0"]
+build-backend = "uv_build"
