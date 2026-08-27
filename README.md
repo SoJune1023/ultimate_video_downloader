@@ -9,7 +9,10 @@ Made by claude, not me.
 
 - Window : `winget install ffmpeg`  
 - macOS : `brew install ffmpeg`  
-- Ubuntu/Debian : `sudo apt install ffmpeg`  
+- Ubuntu/Debian : `sudo apt install ffmpeg`
+
+#### Install UV
+- macOS : `brew install uv`
 
 ```bash
 pip install -e . 
@@ -18,11 +21,12 @@ pip install -e .
 ### Step 2. Run pyinstaller  
 
 ```bash
-python -m PyInstaller --onefile \
-  --name ultimate_downloader \
+uv run pyinstaller \  --name ultimate-video-downloader \
+  --onefile \
+  --paths src \
   --collect-all yt_dlp \
-  --collect-all certifi \
-  src/__main__.py
+  --add-data certifi \
+  src/ultimate_video_downloader/main.py
 ```
 
 ### Step 3. Run file
