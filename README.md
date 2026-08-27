@@ -12,6 +12,7 @@ Made by claude, not me.
 - Ubuntu/Debian : `sudo apt install ffmpeg`
 
 #### Install UV
+You should install uv even you are not using macOS
 - macOS : `brew install uv`
 
 ```bash
